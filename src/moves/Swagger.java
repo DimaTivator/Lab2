@@ -2,14 +2,15 @@ package moves;
 
 import ru.ifmo.se.pokemon.*;
 
-public class Charm extends StatusMove {
+public class Swagger extends StatusMove {
 
-    public Charm() {
-        super(Type.FAIRY, 0, 100);
+    public Swagger() {
+        super(Type.NORMAL, 0, 85);
     }
 
     @Override
     protected void applyOppEffects(Pokemon defender) {
+        defender.confuse();
         if (Stat.ATTACK.isHidden()) {
             defender.setMod(Stat.ATTACK, 3);
         } else {
@@ -18,12 +19,12 @@ public class Charm extends StatusMove {
     }
 
     @Override
-    protected boolean checkAccuracy(Pokemon defender, Pokemon attacker) {
+    protected boolean checkAccuracy(Pokemon attacker, Pokemon defender) {
         return true;
     }
 
     @Override
     protected String describe() {
-        return "использует Charm";
+        return "использует Swagger";
     }
 }
