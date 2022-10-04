@@ -19,7 +19,7 @@ public class Charm extends StatusMove {
     }
 
     @Override
-    protected boolean checkAccuracy(Pokemon pokemon, Pokemon pokemon1) {
+    protected boolean checkAccuracy(Pokemon defender, Pokemon attacker) {
         return true;
     }
 
