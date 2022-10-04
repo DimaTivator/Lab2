@@ -16,6 +16,11 @@ public class Rest extends StatusMove {
     }
 
     @Override
+    protected boolean checkAccuracy(Pokemon pokemon, Pokemon pokemon1) {
+        return true;
+    }
+
+    @Override
     protected String describe() {
         return "использует Rest";
     }
