@@ -10,9 +10,11 @@ public class Facade extends PhysicalMove {
 
     @Override
     protected void applyOppDamage(Pokemon defender, double damage) {
+        defender.setMod(Stat.HP, (int) Math.round(damage));
+
         Status condition = defender.getCondition();
         if (condition.equals(Status.BURN) || condition.equals(Status.POISON) || condition.equals(Status.PARALYZE)) {
-            defender.setMod(Stat.HP, (int)(-2 * damage));
+            defender.setMod(Stat.HP, (int) Math.round(2 * damage));
         }
     }
 

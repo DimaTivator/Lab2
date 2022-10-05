@@ -16,7 +16,7 @@ public class Coil extends StatusMove {
     }
 
     @Override
-    protected boolean checkAccuracy(Pokemon pokemon, Pokemon pokemon1) {
+    protected boolean checkAccuracy(Pokemon attacker, Pokemon defender) {
         return true;
     }
 

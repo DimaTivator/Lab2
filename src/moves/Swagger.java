@@ -11,11 +11,7 @@ public class Swagger extends StatusMove {
     @Override
     protected void applyOppEffects(Pokemon defender) {
         defender.confuse();
-        if (Stat.ATTACK.isHidden()) {
-            defender.setMod(Stat.ATTACK, 3);
-        } else {
-            defender.setMod(Stat.ATTACK, 2);
-        }
+        defender.setMod(Stat.ATTACK, 2);
     }
 
     @Override

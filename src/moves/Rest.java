@@ -16,7 +16,7 @@ public class Rest extends StatusMove {
     }
 
     @Override
-    protected boolean checkAccuracy(Pokemon defender, Pokemon attacker) {
+    protected boolean checkAccuracy(Pokemon attacker, Pokemon defender) {
         return true;
     }
 

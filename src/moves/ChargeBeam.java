@@ -9,10 +9,15 @@ public class ChargeBeam extends SpecialMove {
     }
 
     @Override
-    protected void applyOppEffects(Pokemon defender) {
+    protected void applySelfEffects(Pokemon attacker) {
         if (Math.random() < 0.7) {
-            defender.setMod(Stat.SPECIAL_ATTACK, 1);
+            attacker.setMod(Stat.SPECIAL_ATTACK, 1);
         }
+    }
+
+    @Override
+    protected boolean checkAccuracy(Pokemon attacker, Pokemon defender) {
+        return true;
     }
 
     @Override

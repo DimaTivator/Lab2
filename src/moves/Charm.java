@@ -10,15 +10,11 @@ public class Charm extends StatusMove {
 
     @Override
     protected void applyOppEffects(Pokemon defender) {
-        if (Stat.ATTACK.isHidden()) {
-            defender.setMod(Stat.ATTACK, 3);
-        } else {
-            defender.setMod(Stat.ATTACK, 2);
-        }
+        defender.setMod(Stat.ATTACK, -2);
     }
 
     @Override
-    protected boolean checkAccuracy(Pokemon defender, Pokemon attacker) {
+    protected boolean checkAccuracy(Pokemon attacker, Pokemon defender) {
         return true;
     }
 
